@@ -5,10 +5,17 @@ body {
   background-color: #fdf4f4;
 }
 
+footer {
+  background: #de7c6d;
+  margin-top: 30px;
+  border-top: 5px solid black;
+}
+
 h1,
 h2,
 h3,
-h4 {
+h4,
+a {
   font-family: "Roboto Slab", "Helvetica", sans-serif;
   text-transform: uppercase;
 }
@@ -95,12 +102,12 @@ a {
 
 .welcome {
   text-align: center;
-  font-size: 2.75em;
+  font-size: 1.5em;
   margin: auto;
   inline-size: 14em; /* check this shit later on */
 }
 
-/*     main content home page      */
+/*     main content home page / Grid items     */
 
 .main-choises {
   display: grid;
@@ -109,6 +116,7 @@ a {
   max-width: 1000px;
   margin: 40px auto;
   gap: 30px 10px;
+  padding: 20px;
 }
 .main-choises img {
   width: 100%;
@@ -118,4 +126,47 @@ a {
 .main-choises div {
   background-color: #0a3641;
   color: #de7c6d;
+  align-items: center;
+  justify-content: center;
+  display: grid;
 }
+
+/*        extra content / bottom of page           */
+
+.extra-content {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  min-height: 30vh;
+  max-width: 80vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: auto;
+}
+
+.first {
+  background-image: url(../images/diverse1.jpg);
+}
+
+.second {
+  background-image: url(../images/diverse3.jpg);
+}
+
+.third {
+  background-image: url(../images/diverse2.jpg);
+}
+
+.forth {
+  background-image: url(../images/diverse4.jpg);
+  background-position-y: bottom;
+}
+
+.extra-content a {
+  color: #0a3641;
+  text-decoration: underline;
+  padding: 0 40px; /*  remove for mobile  */
+}
+
+/*              FOOTER              */
