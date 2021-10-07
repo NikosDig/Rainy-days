@@ -3,12 +3,12 @@ body {
   margin: 0px;
   min-height: 100vh;
   background-color: #fdf4f4;
+  overflow-x: hidden;
+  font-size: 2em;
 }
 
-footer {
-  background: #de7c6d;
-  margin-top: 30px;
-  border-top: 5px solid black;
+main {
+  margin-bottom: 30px;
 }
 
 h1,
@@ -18,6 +18,7 @@ h4,
 a {
   font-family: "Roboto Slab", "Helvetica", sans-serif;
   text-transform: uppercase;
+  color: #de7c6d;
 }
 
 header {
@@ -27,6 +28,16 @@ header {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ddd;
+}
+
+footer {
+  background: #de7c6d;
+  margin-top: 30px;
+  border-top: 5px solid #0a3641;
+  max-width: 100%;
+  text-align: center;
+  padding: 5px 10px;
+  position: relative;
 }
 
 /*     NAV      */
@@ -81,7 +92,6 @@ nav li {
 
 .sub-nav a {
   color: #de7c6d;
-  font-size: 2em;
 }
 
 /*   Links   */
@@ -109,27 +119,43 @@ a {
 
 /*     main content home page / Grid items     */
 
-.main-choises {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+.main-choises .item {
   max-width: 1000px;
   margin: 40px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* make it 1 fr for mobile*/
+  background-color: #0a3641;
   gap: 30px 10px;
-  padding: 20px;
+  color: #de7c6d;
 }
+
+.main-choises .item:nth-of-type(2) {
+  direction: rtl;
+}
+
+.img-wrapper {
+  height: 350px;
+}
+
 .main-choises img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-.main-choises div {
+.titel-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .main-choises div {
   background-color: #0a3641;
   color: #de7c6d;
   align-items: center;
   justify-content: center;
   display: grid;
-}
+} */
 
 /*        extra content / bottom of page           */
 
@@ -144,6 +170,8 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin: auto;
+  justify-content: space-evenly;
+  align-items: start;
 }
 
 .first {
@@ -152,6 +180,7 @@ a {
 
 .second {
   background-image: url(../images/diverse3.jpg);
+  background-position-y: -20px;
 }
 
 .third {
@@ -170,3 +199,14 @@ a {
 }
 
 /*              FOOTER              */
+
+footer a,
+h4,
+p {
+  display: block;
+  color: #0a3641;
+}
+
+.copyright {
+  color: #0a3641;
+}
