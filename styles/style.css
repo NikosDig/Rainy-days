@@ -1,3 +1,14 @@
+/*    global selectors line: 12 - 50    */
+/*    nav line: 52 - 122   */
+/*    general link styling line: 124 - 129    */
+/*    hero banner section line: 130 - 136   */
+/*    welcome h1 heading line:  138 - 143   */
+/*    main products on home page / Grid items line: 145 - 171   */
+/*    extra content on the bottom of page, line:  173 - 211         */
+/*    FOOTER, line:   213 - 224           */
+/*    hiden items on small screens    226 - 230        */
+/*    @media line: 227 - 262   */
+
 body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
@@ -7,7 +18,7 @@ body {
 }
 
 main {
-  margin-bottom: 30px;
+  margin-bottom: 0 10px 10px 30px;
 }
 
 h1,
@@ -137,7 +148,7 @@ a {
   max-width: 1000px;
   margin: 40px 20px;
   display: grid;
-  grid-template-columns: 2fr 1fr; /* make it 1 fr for mobile*/
+  grid-template-columns: 2fr 1fr;
   background-color: #0a3641;
   gap: 30px 10px;
   color: #de7c6d;
@@ -219,6 +230,7 @@ p {
 }
 
 /*        @media querys            */
+
 @media (min-width: 600px) {
   nav {
     display: flex;
@@ -255,3 +267,10 @@ p {
     margin: 40px auto;
   }
 }
+
+/*  the changes i made on my styling are quite few, i tryed to stay as much as possible to the original styling. the changes are: 
+i removed the multiple hero banners and left only 1 (i know that  the img is irelevant to the page but its the one i subited with my styling so i just left it there)
+on the footer section i had the items inside it on the 2 corners of the page now i have them one under the other,i removed the home button as there is the logo button there and i thought it was
+a bit unesecary to have both
+i changed the bg color of the buttons on nav , (on the original it had more opacity now its whitish)
+if i am not forgetting something thats all the changes i made to my styling    */
