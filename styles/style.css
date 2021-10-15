@@ -59,10 +59,6 @@ nav {
   display: none;
 }
 
-header a {
-  padding: 5px;
-}
-
 header nav {
   background-color: #eec8c2;
   filter: opacity(85%);
@@ -90,6 +86,9 @@ nav li {
   border: 1px solid #de7c6d;
   border-radius: 50%;
   background-color: #fdf4f4;
+  height: 25px;
+  width: 25px;
+  text-align: center;
 }
 .search-styling {
   border: 1px solid #de7c6d;
@@ -151,7 +150,7 @@ a {
   grid-template-columns: 2fr 1fr;
   background-color: #0a3641;
   gap: 30px 10px;
-  color: #de7c6d;
+  color: #fff;
 }
 
 .main-choises .item:nth-of-type(2) {
