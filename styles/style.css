@@ -150,6 +150,8 @@ a {
   grid-template-columns: 2fr 1fr;
   background-color: #0a3641;
   gap: 30px 10px;
+}
+.main-choises a {
   color: #fff;
 }
 
@@ -209,6 +211,43 @@ a {
   padding: 0px 10px 15px 15px;
 }
 
+/*     Mens Jackets      */
+.jacket_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px 40px;
+  gap: 20px;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+}
+.jacket {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.jacket img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+}
+.cardhover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.card:hover .cardhover {
+  display: inline;
+}
+
 /*              FOOTER              */
 
 footer a,
@@ -266,13 +305,3 @@ p {
     margin: 40px auto;
   }
 }
-
-/*  the changes i made on my styling are quite few, i tryed to stay as much as possible to the original styling. the changes are: 
-i removed the multiple hero banners and left only 1 (i know that  the img is irelevant to the page but its the one i subited with my styling so i just left it there)
-on the footer section i had the items inside it on the 2 corners of the page now i have them one under the other,i removed the home button as there is the logo button there and i thought it was
-a bit unesecary to have both
-i changed the bg color of the buttons on nav , (on the original it had more opacity now its whitish)
-if i am not forgetting something thats all the changes i made to my styling
-IMPORTANT NOTICE: i know the hamburger menu is not fixed,i would like to fix it with js when the time comes
-(MJ said that either we will fix it with CSS or we can wait and fix it with js)
- If you want me to fix it on the next delivary with css just tell me and i will fix it    */

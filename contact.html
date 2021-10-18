@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .card {
+            position: relative;
+            display: inline-block;
+        }
+        .card .img-top {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+        .card:hover .img-top {
+            display: inline;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="card">
+            <img src="images/jackets/item1.jpg" alt="Card Back">
+            <img src="images/jackets/item1hover.jpg" class="img-top" alt="Card Front">
+        </div>
+</body>
+</html>
