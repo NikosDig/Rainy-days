@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  margin-bottom: 0 10px 10px 30px;
+  margin-bottom: 30px;
 }
 
 h1,
@@ -246,6 +246,20 @@ a {
 }
 .card:hover .cardhover {
   display: inline;
+}
+.curent {
+  text-decoration: underline;
+}
+.next_page {
+  display: flex;
+  justify-content: flex-end;
+}
+.next_page_item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 /*              FOOTER              */
