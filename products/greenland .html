@@ -14,17 +14,17 @@
 </head>
 <body>
     <header>
-        <a href="index.html"> <img src="../images/logo.png" alt="logo of rainy days" class="logo"></a>
+        <a href="../index.html"> <img src="../images/logo.png" alt="logo of rainy days" class="logo"></a>
         <nav>
           <ul>
-            <li class="nav-styling"><a href="contact.html" title="hamburger"><i class="fas fa-bars"></i></a></li>
-            <li class="nav-styling"><a href="contact.html" title="contact"><i class="fas fa-map-marker-alt"></i></a></li>
-            <li class="nav-styling"><a href="sign.html" title="sign in"><i class="fas fa-male"></i></a></li>
-            <li class="nav-styling"><a href="my_wallet.html" title="my wallet"><i class="fas fa-shopping-bag"></i></a></li>
+            <li class="nav-styling"><a href="../contact.html" title="hamburger"><i class="fas fa-bars"></i></a></li>
+            <li class="nav-styling"><a href="../contact.html" title="contact"><i class="fas fa-map-marker-alt"></i></a></li>
+            <li class="nav-styling"><a href="../sign.html" title="sign in"><i class="fas fa-male"></i></a></li>
+            <li class="nav-styling"><a href="../my_wallet.html" title="my wallet"><i class="fas fa-shopping-bag"></i></a></li>
             <li class="search-styling">
               <form id="form" class="hiden">
                 <input type="search" id="search" name="search" placeholder="Search here">
-                <button class="search-buttons"><i class="fas fa-search"></i></a></button>
+                <button class="search-buttons"><i class="fas fa-search"></i></button>
               </form>
             </li>
           </ul>
@@ -33,16 +33,16 @@
       <main>
         <div class="sub-nav">
             <div>
-              <a href="jackets.html" title="mens jackets">Men</a>
+              <a href="../jackets.html" title="mens jackets">Men</a>
             </div>
             <div>
-              <a href="jackets.html" title="womens jackets">Women</a>
+              <a href="../jackets.html" title="womens jackets">Women</a>
             </div>
             <div>
-              <a href="jackets.html" title="kids jackets">Kids</a>
+              <a href="../jackets.html" title="kids jackets">Kids</a>
             </div>
             <div>
-              <a href="jackets.html" title="sales">Sales</a>
+              <a href="../jackets.html" title="sales">Sales</a>
             </div>
           </div>
           <section class="breadcrumb">
@@ -50,51 +50,39 @@
             <a href="../jackets.html" title="Mens jackets" class="breadcrumb_item">Men's jackets /</a>
             <p class="breadcrumb_item">Greenland Jacket</p>
           </section>
-          <section>
+          <section class="main-product-container">
                     <div class="card jacket float_left">
                         <img src="../images/jackets/item1.jpg" alt="Greenland jacket">
                         <img src="../images/jackets/item1hover.jpg" alt="Greenland jacket" class="cardhover">
                     </div>
-                    <section>
-                        <div>
+             <section>
+                        <div class="product-spesific-item border-fix">
                             <h1>greenland jacket</h1>
-                            <a href="../contact.html" title="like this jacket"><i class="far fa-heart"></i></a>
+                            <a href="../sign.html" title="like this jacket"><i class="far fa-heart"></i></a>
                         </div>
-                        <div>
-                            <p>10 000kr</p>
+                        <div class="product-spesific-item">
+                            <p class="border-fix">10 000kr</p>
                             <p>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
+                                <a href="../sign.html">3</a>
                             </p>
                         </div>
                         <div>
                             <p>Lightweight and versatile, this jacket provides superior wind protection. The collar and hem can be adjusted to further block out cold winds while reflective details on the collar add visibility in low light.</p>
-                            <div>
-                                      <!-- <div> -->
+                            <div class="product-spesific-item border-fix">
                                           <a href="#" class="yellow"></a>
-                                      <!-- </div>
-                                      <div> -->
                                           <a href="#" class="black"></a>
-                                      <!-- </div>
-                                      <div> -->
                                           <a href="#" class="blue"></a>
-                                      <!-- </div>
-                                      <div> -->
                                           <a href="#" class="red"></a>
-                                      <!-- </div>
-                                  </div>
-                                      <div> -->
                                           <a href="#" class="cta"> Add to Bag</a>
-                                      <!-- </div> -->
                             </div>
                         </div>
-                      </section>
-                      <section>
-                        <p>SIZE</p>
-                        <form action="POST">
+                        <form action="POST"  class="product-spesific-item border-fix">
+                          <p>SIZE</p>
                           <input type="radio" name="size" id="xs">
                           <label for="xs">XS</label>
                           <input type="radio" name="size" id="s">
@@ -106,7 +94,68 @@
                           <input type="radio" name="size" id="xl">
                           <label for="xl">XL</label>
                         </form>
-                      </section>
+            </section>
+          </section>
+
+          <section class="main-product-container">
+            <div>
+              <h2 class="border-fix">Features</h2>
+              <ul>
+                <li>Shoulders and pockets are reinforced with added fabric for durability</li>
+                <li>Articulated sleeves enhance fit</li>
+                <li>2 interior pockets</li>
+                <li>Hem is longer in the back for added coverage and protection</li>
+              </ul>
+            </div>
+            <div class="card jacket float_left">
+              <img src="../images/jackets/item1.jpg" alt="greenland red jacket">
+            </div>
+          </section>
+
+          <section class="text-align">
+            <h3 class="border-fix">Also recomended to you</h3>
+            <div class="jacket_list">
+              <div class="jacket">
+                <div class="card">
+                  <a href="products/greenland .html" title="Sarp jacket"><img src="../images/jackets/item4.jpg" alt="Sarp jacket"> </a>
+                  <a href="products/greenland .html" title="Sarp jacket"><img src="../images/jackets/item4hover.jpg" alt="Sarp jacket" class="cardhover"> </a>
+                </div>
+                  <h2>Sarp Jacket</h2>
+                  <p>170 000 kr</p>
+              </div>
+          <div class="jacket">
+            <div class="card">
+              <a href="products/greenland .html" title="Holmlia jacket"><img src="../images/jackets/item5.jpg" alt="Holmlia jacket"> </a>
+              <a href="products/greenland .html" title="Holmlia jacket"><img src="../images/jackets/item5hover.jpg" alt="Holmlia jacket" class="cardhover"> </a>
+            </div>
+              <h2>Holmlia Jacket</h2>
+              <p>200 000 kr</p>
+            </div>
+          <div class="jacket">
+            <div class="card">
+              <a href="products/greenland .html" title="Unfollow jacket"><img src="../images/jackets/item6.jpg" alt="Unfollow jacket"> </a>
+              <a href="products/greenland .html" title="Unfollow jacket"><img src="../images/jackets/item6hover.jpg" alt="Unfollow jacket" class="cardhover"> </a>
+            </div>
+              <h2>Unfollow Jacket</h2>
+              <p>1 000 kr</p>
+            </div>
+            </div>
+          </section>
+
+          <section class="reviews">
+            <h3 class="border-fix">RATINGS AND REVIEWS</h3>
+            <div>
+              <img src="../images/reviews/trump.jpg" alt="picture of donald" class="review-image">
+              <p>I approve <span class="reviews-name">Donald</span></p>
+            </div>
+            <div>
+              <img src="../images/reviews/chuck.jpg" alt="picture of chuck norris" class="review-image">
+              <p>Lorem ipsum dolor sit amet <span class="reviews-name">Chuck Norris</span></p>
+            </div>
+            <div>
+              <img src="../images/reviews/queen.jpg" alt="picture of the old lady" class="review-image">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, eum <span class="reviews-name">Old Lady</span></p>
+            </div>
           </section>
       </main>
       <footer>
