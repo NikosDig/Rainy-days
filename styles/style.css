@@ -149,6 +149,7 @@ a {
   color: #fff;
   padding: 10px 40px;
   margin: 20px auto;
+  border-radius: 6px;
 }
 .cta:hover {
   background: #fff;
@@ -261,7 +262,7 @@ a {
 /*     Mens Jackets      */
 .jacket_list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin: 20px 40px;
   gap: 20px;
   align-content: stretch;
@@ -311,6 +312,19 @@ a {
 }
 
 /*       Jacket specific page         */
+.size input {
+  display: none;
+}
+.size label {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.size input:checked + label {
+  background-color: #0a3641;
+  color: #ddd;
+}
 .breadcrumb {
   display: flex;
   justify-content: flex-start;
@@ -359,7 +373,7 @@ a {
 
 .main-product-container {
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 1fr;
   margin: 30px 20px 30px 5px;
   justify-content: center;
 }
@@ -380,7 +394,42 @@ a {
   text-align: center;
   margin: 40px 10px;
 }
+/*     Reviws section inside jacket spesific page     */
 
+.reviews-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.reviews-content > * {
+  flex: 1;
+}
+.reviews-content p {
+  font-size: 0.75em;
+  margin: auto;
+  inline-size: 15em;
+}
+.reviews-content div {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  margin: 20px;
+  align-items: center;
+}
+.review-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  float: left;
+}
+.reviews-name {
+  display: block;
+}
+.wright-review {
+  text-decoration: underline;
+  color: #000;
+  font-size: 10px;
+}
 /*     About       */
 .about_container,
 .contact_container {
@@ -514,6 +563,12 @@ textarea {
   .img-wrapper {
     height: 350px;
   }
+  .jacket_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-product-container {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 @media (min-width: 800px) {
@@ -522,6 +577,12 @@ textarea {
   }
   .sign-container {
     flex-direction: row;
+  }
+  .jacket_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-product-container {
+    grid-template-columns: 40% 50%;
   }
 }
 
