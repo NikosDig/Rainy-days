@@ -1,13 +1,19 @@
-/*    global selectors line: 12 - 50    */
-/*    nav line: 52 - 122   */
-/*    general link styling line: 124 - 129    */
-/*    hero banner section line: 130 - 136   */
-/*    welcome h1 heading line:  138 - 143   */
-/*    main products on home page / Grid items line: 145 - 171   */
-/*    extra content on the bottom of page, line:  173 - 211         */
-/*    FOOTER, line:   213 - 224           */
-/*    hiden items on small screens    226 - 230        */
-/*    @media line: 227 - 262   */
+/*    global selectors line: 18 - 75    */
+/*    nav line: 76 - 146   */
+/*    general link styling line: 147 - 181    */
+/*    hero banner section line: 182 - 189   */
+/*    welcome h1 heading line:  190 - 196   */
+/*    main products on home page / Grid items line: 197 - 227   */
+/*    extra content on the bottom of page, line:  228 - 267         */
+/*    Mens jackets, line: 269-319                                    */
+/*    Jacket specific page, line: 320-402         */
+/*    Reviws section inside jacket spesific page, line: 403-438     */
+/*    About , line: 439-452      */
+/*    Contact , line: 453-486    */
+/*    Sign in , line: 487-540       */
+/*    FOOTER, line:   54 - 75           */
+/*    hiden items on small screens    541 - 546        */
+/*    @media line: 547 - 608   */
 
 body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
