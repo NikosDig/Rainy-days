@@ -156,6 +156,7 @@ a {
   padding: 10px 40px;
   margin: 20px auto;
   border-radius: 6px;
+  display: inline-block;
 }
 .cta:hover {
   background: #fff;
@@ -544,6 +545,30 @@ textarea {
   display: none;
 }
 
+/*    Enter Payment Page      */
+
+.wallet-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem 0 3rem 1rem;
+}
+.wallet-container > * {
+  flex: 1;
+}
+.wallet-container input {
+  width: 80%;
+}
+.expiration input {
+  display: inline-block;
+  width: 15%;
+}
+
+/*     Success Page     */
+.success-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 /*        @media querys            */
 
 @media (min-width: 600px) {
