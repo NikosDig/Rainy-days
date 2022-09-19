@@ -86,7 +86,7 @@ nav {
 header nav {
   background-color: #eec8c2;
   filter: opacity(85%);
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 nav i {
@@ -104,6 +104,7 @@ nav li {
   display: block;
   padding: 10px 10px;
   display: inline-block;
+  margin: 5px;
 }
 
 .nav-styling {
@@ -126,10 +127,11 @@ nav li {
 }
 
 .logo {
+  display: inline-block;
   position: relative;
   max-width: 300px;
-  max-height: 150px;
-  padding-left: 25px;
+  max-height: 200px;
+  height: 150px;
 }
 
 .sub-nav {
@@ -229,9 +231,7 @@ a {
 /*        extra content / bottom of page           */
 
 .extra-content {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
+
   min-height: 30vh;
   max-width: 80vw;
   position: relative;
@@ -243,21 +243,29 @@ a {
 }
 
 .first {
-  background-image: url(../images/diverse1.jpg);
+  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../images/diverse1.jpg);
+  /* background-image: url(../images/diverse1.jpg); */
+  background-size: cover;
 }
 
 .second {
-  background-image: url(../images/diverse3.jpg);
-  background-position-y: -20px;
+  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../images/diverse3.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: -30px;
 }
 
 .third {
-  background-image: url(../images/diverse2.jpg);
+  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../images/diverse2.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: -15px;
+  /* background-image: url(../images/diverse2.jpg); */
 }
 
 .forth {
-  background-image: url(../images/diverse4.jpg);
+  background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url(../images/diverse4.jpg) no-repeat;
+  /* background-image: url(../images/diverse4.jpg); */
   background-position-y: bottom;
+  background-size: cover;
 }
 
 .extra-content a {
@@ -585,9 +593,19 @@ textarea {
 }
 /*        @media querys            */
 
+@media (min-width: 300px) {
+  .logo {
+    padding-left: 0px;
+  }
+}
+
 @media (min-width: 600px) {
+  .logo {
+    padding-left: 25px;
+  }
   nav {
     display: flex;
+    width: 300px;
   }
   header {
     justify-content: space-between;
@@ -617,6 +635,7 @@ textarea {
 }
 
 @media (min-width: 800px) {
+
   .welcome {
     font-size: 3em;
   }
@@ -628,6 +647,12 @@ textarea {
   }
   .main-product-container {
     grid-template-columns: 40% 50%;
+  }
+}
+
+@media (min-width: 850px) {
+  nav {
+    width: auto;
   }
 }
 
