@@ -110,6 +110,8 @@ footer {
 }
 .curentlyOnThisPage {
   text-decoration: underline;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
 .hamburgerMenu.active {
   display: flex;
