@@ -50,7 +50,7 @@ header {
   background-color: #eec8c2;
   filter: opacity(85%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #ddd;
 }
@@ -84,11 +84,49 @@ footer {
 #form {
   background-color: ivory;
 }
-
+.navFix {
+  display: flex;
+  align-items: center;
+}
+.hamburger {
+  padding: 10px 10px;
+  display: inline-block;
+  margin: 5px;
+  color: #de7c6d;
+  font-size: 1.5rem;
+  line-height: 1px;
+  cursor: pointer;
+}
+.hamburgerMenu {
+  display: none;
+  position: fixed;
+  top: 110px;
+  right: 10px;
+  background-color: #fff;
+}
+.hamburgerMenu a {
+  padding: 5px;
+  color: #db624f;
+}
+.curentlyOnThisPage {
+  text-decoration: underline;
+}
+.hamburgerMenu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  border: 2px solid #0a3641;
+  width: 200px;
+  padding: 5px;
+}
 nav {
   display: none;
 }
-
+header {
+  position: relative;
+  z-index: 1000;
+}
 header nav {
   background-color: #eec8c2;
   filter: opacity(85%);
@@ -104,6 +142,7 @@ nav i {
 
 nav ul {
   list-style-type: none;
+  padding-left: 0px;
 }
 
 nav li {
@@ -137,6 +176,7 @@ nav li {
   position: relative;
   max-width: 300px;
   max-height: 200px;
+  width: 200px;
   height: 150px;
 }
 
@@ -295,6 +335,8 @@ a {
   display: grid;
   justify-items: center;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
 }
 .jacket img {
   width: 100%;
@@ -306,7 +348,9 @@ a {
   position: relative;
   display: inline-block;
   margin: 20px;
-  border: 1px solid black;
+}
+.borderedAndShadow {
+    border: 1px solid black;
   border-radius: 15px;
   overflow: hidden;
   filter: drop-shadow(2px 4px 6px black);
@@ -605,7 +649,7 @@ textarea {
 
 @media (min-width: 300px) {
   .logo {
-    padding-left: 0px;
+    padding-left: 10px;
   }
 }
 
@@ -613,10 +657,14 @@ textarea {
   .logo {
     padding-left: 25px;
   }
+  .hamburgerMenu {
+    right: 230px;
+  }
   nav {
     display: flex;
     width: 300px;
   }
+
   header {
     justify-content: space-between;
   }
@@ -665,7 +713,11 @@ textarea {
     width: auto;
   }
 }
-
+@media (min-width: 900px) {
+  .hamburgerMenu {
+    right: 350px;
+  }
+}
 @media (min-width: 1000px) {
   .main-choises .item {
     margin: 40px auto;
