@@ -16,11 +16,15 @@ main.addEventListener("click", () => {
 });
 
 //  cart functionality
+//
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function checkIfButtonExists() {
   if (addToCartButton) {
-    addToCartButton.addEventListener("click", () => {
+    addToCartButton.addEventListener("click", (event) => {
       cartNumbers();
       walletNumberOnMemory();
+      console.log(event.target.dataset.item);
     });
   }
 }
@@ -33,7 +37,7 @@ function walletNumberOnMemory() {
   }
 }
 
-function cartNumbers() {
+function cartNumbers(event) {
   let productNumbers = localStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
   if (productNumbers) {
@@ -44,5 +48,6 @@ function cartNumbers() {
     numberOfItemsInWallet.textContent = 1;
   }
 }
+
 checkIfButtonExists();
 walletNumberOnMemory();

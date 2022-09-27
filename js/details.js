@@ -49,7 +49,7 @@ mainContent.innerHTML = `
               <a href="#" class="black"></a>
               <a href="#" class="blue"></a>
               <a href="#" class="red"></a>
-              <button class="cta cart">ADD TO BAG</button>
+              <button class="cta cart" data-item="${item.id}">ADD TO BAG</button>
             </div>
           </div>
           <form action="POST" class="product-spesific-item border-fix size">
