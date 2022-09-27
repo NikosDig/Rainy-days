@@ -153,7 +153,16 @@ nav li {
   display: inline-block;
   margin: 5px;
 }
-
+.numberOfItemsInWallet {
+  position: fixed;
+  top: 18px;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(252, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: none;
+}
 .nav-styling {
   border: 1px solid #de7c6d;
   border-radius: 50%;
