@@ -24,7 +24,6 @@ function checkIfButtonExists() {
     addToCartButton.addEventListener("click", (event) => {
       cartNumbers();
       walletNumberOnMemory();
-      console.log(event.target.dataset.item);
     });
   }
 }

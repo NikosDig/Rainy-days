@@ -4,8 +4,22 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const item = productList[id - 1];
-console.log(item);
+if (!id) {
+  document.location.href = "/jackets.html";
+}
+
+const item = productList.find(function (item) {
+  if (item.id === id) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+if (!item) {
+  document.location.href = "/jackets.html";
+}
+
 document.title = `${item.name}` + " || Details";
 mainContent.innerHTML = `
         <section class="breadcrumb">
@@ -86,3 +100,45 @@ mainContent.innerHTML = `
       </div>
     </section>
 `;
+
+const button = document.querySelector(".cta");
+
+button.addEventListener("click", () => {
+  setProductOnMemory(item);
+});
+
+function setProductOnMemory(item) {
+  let cartItems = localStorage.getItem("products");
+  cartItems = JSON.parse(cartItems);
+
+  if (cartItems != null) {
+    if (cartItems[item.name] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [item.name]: item,
+      };
+    }
+    cartItems[item.name].inCart += 1;
+  } else {
+    item.inCart = 1;
+    cartItems = {
+      [item.name]: item,
+    };
+  }
+
+  localStorage.setItem("products", JSON.stringify(cartItems));
+
+  totalPrice(item);
+}
+
+function totalPrice(item) {
+  console.log("my total price is ", item.price);
+  let priceInMemory = localStorage.getItem("price");
+  console.log(typeof priceInMemory);
+  if (priceInMemory) {
+    priceInMemory = parseInt(priceInMemory);
+    localStorage.setItem("price", (priceInMemory += item.price));
+  } else {
+    localStorage.setItem("price", item.price);
+  }
+}
