@@ -573,6 +573,63 @@ textarea {
   display: none;
 }
 
+/*      my wallet page iems */
+.cart-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-items: center;
+  max-width: 1100px;
+}
+.cart-products {
+  max-width: 1100px;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 15px;
+}
+.cart-products img {
+  width: 75px;
+  height: 75px;
+}
+.nameTag {
+  display: flex;
+  gap: 10px;
+}
+.removeItem {
+  color: #ffffff;
+  background-color: #db624f;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+.basketTotalTitle {
+  width: 30%;
+}
+.basketTotal {
+  width: 10%;
+}
 /*      Sign in        */
 
 .sign-container {

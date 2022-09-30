@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rainy days || Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@500&display=swap"
+      rel="stylesheet">
+    <meta name="description" content="Pay for your items" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/3f23dcbf81.js" crossorigin="anonymous"></script>
+    <!-- Hotjar Tracking Code for https://rainydaysnd.netlify.app/ -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3116622,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+<body>
+    <header>
+        <a href="index.html"> <img src="images/logo.png" alt="logo of rainy days" class="logo"></a>
+        <nav>
+          <ul>
+            <li class="nav-styling"><a href="contact.html" title="hamburger"><i class="fas fa-bars"></i></a></li>
+            <li class="nav-styling"><a href="contact.html" title="contact"><i class="fas fa-map-marker-alt"></i></a></li>
+            <li class="nav-styling"><a href="sign.html" title="sign in"><i class="fas fa-male"></i></a></li>
+            <li class="nav-styling"><a href="my_wallet.html" title="my wallet"><i class="fas fa-shopping-bag"></i></a></li>
+            <li class="search-styling">
+              <form id="form2" class="hiden">
+                <input type="search" id="search" name="search" placeholder="Search here">
+                <button class="search-buttons"><i class="fas fa-search"></i></button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="sub-nav">
+            <div>
+              <a href="jackets.html" title="mens jackets">Men</a>
+            </div>
+            <div>
+              <a href="jackets.html" title="womens jackets">Women</a>
+            </div>
+            <div>
+              <a href="jackets.html" title="kids jackets">Kids</a>
+            </div>
+            <div>
+              <a href="jackets.html" title="sales">Sales</a>
+            </div>
+          </div>
+          <h1 class="welcome">Enter Your Payment Details</h1>
+          <section>
+            <div class="wallet-container">
+              <div class="billing-info">
+                <form action="POST">
+                  <h2>Billing Info</h2>
+                  <label for="wallet-name"></label>
+                  <input type="text" id="wallet-name" name="wallet-name" placeholder="Full Name">
+                  <label for="wallet-adress"></label>
+                  <input type="text" id="wallet-adress" name="wallet-adress" placeholder="Adress">
+                  <label for="wallet-city"></label>
+                  <input type="text" id="wallet-city" name="wallet-city" placeholder="City">
+                  <label for="walet-zipcode"></label>
+                  <input type="numer" id="wallet-zipcode" name="wallet-zipcode" placeholder="Zip Code">
+                </form>
+              </div>
+              <div class="card-info">
+                <form action="post">
+                  <h2>Card Info</h2>
+                  <label for="card-number"></label>
+                  <input type="number" id="card-number" name="card-number" placeholder="Card Number">
+                  <label for="card-name"></label>
+                  <input type="text" id="card-name" name="card-name" placeholder="Cardholder Name">
+                  <div class="expiration">
+                    <span>
+                      <input type="text" name="month" placeholder="MM" maxlength="2" size="2" />
+                      <span>/</span>
+                      <input type="text" name="year" placeholder="YY" maxlength="2" size="2" />
+                    </div>
+                    <label for="cvc"></label>
+                    <input type="number" id="cvc" name="cvc" min="111" max="999" placeholder="CVC">
+                  </span>
+                  <div>
+                    <a href="success.html" class="cta">Confirm</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer>
+        <div class="copyright">
+          Copyright &copy;
+        </div>
+        <section>
+          <div>
+            <h4>
+              <a href="about.html">About Us</a>
+            </h4>
+              <div class="hiden">
+                <a href="about.html">Our History</a>
+                <a href="about.html">Company news</a>
+                <a href="about.html">Sustainability</a>
+                <a href="about.html">Career</a>
+                <a href="about.html">Tech and Inovation</a>
+              </div>
+          </div>
+          <div>
+            <h4><a href="contact.html">Contact Us</a></h4>
+            <p>Tlf: 123 45 678</p>
+            <p>E mail: rainydays@rainydays.no</p>
+          </div>
+        </section>
+      </footer>
+</body>
+</html>

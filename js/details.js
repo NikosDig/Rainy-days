@@ -4,9 +4,9 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-if (!id) {
-  document.location.href = "/jackets.html";
-}
+// if (!id) {
+//   document.location.href = "/jackets.html";
+// }
 
 const item = productList.find(function (item) {
   if (item.id === id) {
@@ -16,9 +16,9 @@ const item = productList.find(function (item) {
   }
 });
 
-if (!item) {
-  document.location.href = "/jackets.html";
-}
+// if (!item) {
+//   document.location.href = "/jackets.html";
+// }
 
 document.title = `${item.name}` + " || Details";
 mainContent.innerHTML = `
