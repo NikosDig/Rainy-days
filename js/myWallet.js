@@ -32,3 +32,10 @@ function displayItemsOnWallet() {
   }
 }
 displayItemsOnWallet();
+
+const removeItem = document.getElementsByClassName("removeItem");
+// for (let i = 0; i < removeItem.length; ) {
+//   removeItem[i].addEventListener("click", () => {
+//     console.log(removeItem[i]);
+//   });
+// }
