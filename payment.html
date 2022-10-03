@@ -24,23 +24,59 @@
 </script>
 </head>
 <body>
-    <header>
-        <a href="index.html"> <img src="images/logo.png" alt="logo of rainy days" class="logo"></a>
-        <nav>
-          <ul>
-            <li class="nav-styling"><a href="contact.html" title="hamburger"><i class="fas fa-bars"></i></a></li>
-            <li class="nav-styling"><a href="contact.html" title="contact"><i class="fas fa-map-marker-alt"></i></a></li>
-            <li class="nav-styling"><a href="sign.html" title="sign in"><i class="fas fa-male"></i></a></li>
-            <li class="nav-styling"><a href="my_wallet.html" title="my wallet"><i class="fas fa-shopping-bag"></i></a></li>
-            <li class="search-styling">
-              <form id="form2" class="hiden">
-                <input type="search" id="search" name="search" placeholder="Search here">
-                <button class="search-buttons"><i class="fas fa-search"></i></button>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="logo of rainy days" class="logo"
+    /></a>
+    <div class="navFix">
+      <button class="hamburger nav-styling">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="hamburgerMenu">
+        <a href="/index.html" class="curentlyOnThisPage">Home</a>
+        <a href="/my_wallet.html">My wallet</a>
+        <a href="/sign.html">Sign in</a>
+        <a href="/jackets.html">Men</a>
+        <a href="/jackets.html">Women</a>
+        <a href="/jackets.html">Kids</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <nav>
+        <ul>
+          <li class="nav-styling hiddenOnNav">
+            <a href="contact.html" title="contact"
+              ><i class="fas fa-map-marker-alt"></i
+            ></a>
+          </li>
+          <li class="nav-styling hiddenOnNav">
+            <a href="sign.html" title="sign in"
+              ><i class="fas fa-male"></i
+            ></a>
+          </li>
+          <li class="nav-styling hiddenOnNav">
+            <a href="my_wallet.html" title="my wallet"
+              ><i class="fas fa-shopping-bag"
+                ><span class="numberOfItemsInWallet">0</span></i
+              ></a
+            >
+          </li>
+          <li class="search-styling hiddenOnNav">
+            <form id="form" class="hiden">
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search here"
+              />
+              <button class="search-buttons">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
       <main>
         <div class="sub-nav">
             <div>
@@ -120,5 +156,6 @@
           </div>
         </section>
       </footer>
+      <script src="/js/script.js" type="module"></script>
 </body>
 </html>
