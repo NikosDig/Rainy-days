@@ -1,4 +1,5 @@
 const cartProducts = document.querySelector(".cart-products");
+const welcomeHeader = document.querySelector("h1");
 
 function displayItemsOnWallet() {
   let price = localStorage.getItem("price");
@@ -10,7 +11,7 @@ function displayItemsOnWallet() {
       cartProducts.innerHTML += `
             <div class="cart-item">
                <div class="nameTag">
-                    <div class="removeItem">x</div>
+                    <div class="removeItem" onClick="delete_row(this)">x</div>
                     <img src="${item.img}">
                     <div> ${item.name} </div>
                </div>
@@ -32,10 +33,18 @@ function displayItemsOnWallet() {
   }
 }
 displayItemsOnWallet();
-
+const cartItem = document.querySelectorAll(".cart-item");
 const removeItem = document.getElementsByClassName("removeItem");
-// for (let i = 0; i < removeItem.length; ) {
-//   removeItem[i].addEventListener("click", () => {
-//     console.log(removeItem[i]);
-//   });
-// }
+function delete_row(e) {
+  e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+}
+
+function h1change() {
+  const cartNumbers = localStorage.getItem("cartNumbers");
+  if (cartNumbers) {
+    welcomeHeader.innerText = "Your cart items";
+  } else {
+    welcomeHeader.innerText = "Please add some items on your cart";
+  }
+}
+h1change();
