@@ -1,47 +1,52 @@
-import { productList } from "./productsList.js";
 const mainContent = document.querySelector(".mainContent");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
+const APIUrl =
+  "https://nikosdigalakis.com/rainydays/wp-json/wc/store/products/" + id;
 
 // if (!id) {
 //   document.location.href = "/jackets.html";
 // }
-
-const item = productList.find(function (item) {
-  if (item.id === id) {
-    return true;
-  } else {
-    return false;
-  }
-});
-
+// const item = productList.find(function (item) {
+//   if (item.id === id) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
 // if (!item) {
 //   document.location.href = "/jackets.html";
 // }
-
-document.title = `${item.name}` + " || Details";
 mainContent.innerHTML = `
+                          <div class="loader"><h3>Loading...</h3></div>
+`;
+
+async function getProducts(url) {
+  const response = await fetch(url);
+  const listOfProducts = await response.json();
+  document.title = `${listOfProducts.name}` + " || Details";
+  mainContent.innerHTML = `
         <section class="breadcrumb">
         <a href="../index.html" title="Home" class="breadcrumb_item">Home /</a>
         <a href="../jackets.html" title="Mens jackets" class="breadcrumb_item"
         >Men's jackets /</a
         >
-        <p class="breadcrumb_item">${item.name}</p>
+        <p class="breadcrumb_item">${listOfProducts.name}</p>
         </section>
         <section class="main-product-container">
         <div class="card jacket float_left">
-          <img src="../${item.img}" alt="${item.name}" />
+          <img src="${listOfProducts.images[0].src}" alt="${listOfProducts.name}" />
         </div>
         <section>
           <div class="product-spesific-item border-fix">
-            <h1>${item.name}</h1>
+            <h1>${listOfProducts.name}</h1>
             <a href="../sign.html" title="like this jacket"
               ><i class="far fa-heart"></i
             ></a>
           </div>
           <div class="product-spesific-item">
-            <p class="border-fix">${item.price} kr</p>
+            <p class="border-fix">${listOfProducts.prices.price} kr</p>
             <p>
               <span class="fa fa-star"></span>
               <span class="fa fa-star"></span>
@@ -53,17 +58,14 @@ mainContent.innerHTML = `
           </div>
           <div>
             <p>
-              Lightweight and versatile, this jacket provides superior wind
-              protection. The collar and hem can be adjusted to further block
-              out cold winds while reflective details on the collar add
-              visibility in low light.
+              ${listOfProducts.description}
             </p>
             <div class="product-spesific-item border-fix">
               <a href="#" class="yellow"></a>
               <a href="#" class="black"></a>
               <a href="#" class="blue"></a>
               <a href="#" class="red"></a>
-              <button class="cta cart" data-item="${item.id}">ADD TO BAG</button>
+              <button class="cta cart" data-item="${listOfProducts.id}">ADD TO BAG</button>
             </div>
           </div>
           <form action="POST" class="product-spesific-item border-fix size">
@@ -96,49 +98,98 @@ mainContent.innerHTML = `
         </ul>
       </div>
       <div class="card jacket float_left">
-        <img src="../${item.img}" alt="${item.name}" />
+        <img src="${listOfProducts.images[0].src}" alt="${listOfProducts.name}" />
       </div>
     </section>
 `;
 
-const button = document.querySelector(".cta");
+  //was here
+  const button = document.querySelector(".cta");
 
-button.addEventListener("click", () => {
-  setProductOnMemory(item);
-});
+  button.addEventListener("click", () => {
+    setProductOnMemory(listOfProducts);
+  });
 
-function setProductOnMemory(item) {
-  let cartItems = localStorage.getItem("products");
-  cartItems = JSON.parse(cartItems);
+  function setProductOnMemory(item) {
+    let cartItems = localStorage.getItem("products");
+    cartItems = JSON.parse(cartItems);
 
-  if (cartItems != null) {
-    if (cartItems[item.name] == undefined) {
+    if (cartItems != null) {
+      if (cartItems[item.name] == undefined) {
+        cartItems = {
+          ...cartItems,
+          [item.name]: item,
+        };
+      }
+      cartItems[item.name].inCart += 1;
+    } else {
+      item.inCart = 1;
       cartItems = {
-        ...cartItems,
         [item.name]: item,
       };
     }
-    cartItems[item.name].inCart += 1;
-  } else {
-    item.inCart = 1;
-    cartItems = {
-      [item.name]: item,
-    };
+
+    localStorage.setItem("products", JSON.stringify(cartItems));
+
+    totalPrice(item);
   }
 
-  localStorage.setItem("products", JSON.stringify(cartItems));
-
-  totalPrice(item);
-}
-
-function totalPrice(item) {
-  console.log("my total price is ", item.price);
-  let priceInMemory = localStorage.getItem("price");
-  console.log(typeof priceInMemory);
-  if (priceInMemory) {
-    priceInMemory = parseInt(priceInMemory);
-    localStorage.setItem("price", (priceInMemory += item.price));
-  } else {
-    localStorage.setItem("price", item.price);
+  function totalPrice(item) {
+    console.log("my total price is ", item.prices.price);
+    let priceInMemory = localStorage.getItem("price");
+    console.log(typeof priceInMemory);
+    if (priceInMemory) {
+      priceInMemory = parseInt(priceInMemory);
+      localStorage.setItem(
+        "price",
+        (priceInMemory += parseInt(item.prices.price))
+      );
+    } else {
+      localStorage.setItem("price", parseInt(item.prices.price));
+    }
   }
 }
+getProducts(APIUrl);
+
+// const button = document.querySelector(".cta");
+
+// button.addEventListener("click", () => {
+//   setProductOnMemory(item);
+// });
+
+// function setProductOnMemory(item) {
+//   let cartItems = localStorage.getItem("products");
+//   cartItems = JSON.parse(cartItems);
+
+//   if (cartItems != null) {
+//     if (cartItems[item.name] == undefined) {
+//       cartItems = {
+//         ...cartItems,
+//         [item.name]: item,
+//       };
+//     }
+//     cartItems[item.name].inCart += 1;
+//   } else {
+//     item.inCart = 1;
+//     cartItems = {
+//       [item.name]: item,
+//     };
+//   }
+
+//   localStorage.setItem("products", JSON.stringify(cartItems));
+
+//   totalPrice(item);
+// }
+
+// function totalPrice(item) {
+//   console.log("my total price is ", item.price);
+//   let priceInMemory = localStorage.getItem("price");
+//   console.log(typeof priceInMemory);
+//   if (priceInMemory) {
+//     priceInMemory = parseInt(priceInMemory);
+//     localStorage.setItem("price", (priceInMemory += item.price));
+//   } else {
+//     localStorage.setItem("price", item.price);
+//   }
+// }
+// here ends the old working code

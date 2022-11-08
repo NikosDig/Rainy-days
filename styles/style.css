@@ -396,6 +396,10 @@ a {
 }
 
 /*       Jacket specific page         */
+.loader {
+  text-align: center;
+  margin: 30px;
+}
 .size input {
   display: none;
 }

@@ -1,4 +1,3 @@
-import { productList } from "./productsList.js";
 const hamburger = document.querySelector(".hamburger");
 const hamburgerMenu = document.querySelector(".hamburgerMenu");
 const main = document.querySelector("main");
