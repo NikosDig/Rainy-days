@@ -135,7 +135,6 @@ async function getProducts(url) {
   }
 
   function totalPrice(item) {
-    console.log("my total price is ", item.prices.price);
     let priceInMemory = localStorage.getItem("price");
     console.log(typeof priceInMemory);
     if (priceInMemory) {
@@ -147,6 +146,7 @@ async function getProducts(url) {
     } else {
       localStorage.setItem("price", parseInt(item.prices.price));
     }
+    console.log("my total price is ", item.prices.price);
   }
 }
 getProducts(APIUrl);

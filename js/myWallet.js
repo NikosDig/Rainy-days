@@ -12,12 +12,12 @@ function displayItemsOnWallet() {
             <div class="cart-item">
                <div class="nameTag">
                     <div class="removeItem" onClick="delete_row(this)">x</div>
-                    <img src="${item.img}">
+                    <img src="${item.images[0].src}">
                     <div> ${item.name} </div>
                </div>
-               <div> ${item.price} kr</div>
+               <div> ${item.prices.price} kr</div>
                <div> ${item.inCart}</div>
-               <div> ${item.price * item.inCart} kr</div>
+               <div> ${item.prices.price * item.inCart} kr</div>
             </div>
         `;
     });
