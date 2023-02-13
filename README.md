@@ -13,6 +13,7 @@ Rainy days is a project targeting men and women aged 30 to 50 whose interests ar
 - [HTML]
 - [CSS]
 - [JS]
+- [WP rest API]
 
 ## Getting Started
 
